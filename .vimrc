@@ -1,5 +1,6 @@
 
 "文字コードをUFT-8に設定
+
 set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
@@ -19,7 +20,7 @@ set number
 " 現在の行を強調表示
 set cursorline
 " 現在の行を強調表示（縦）
-set cursorcolumn
+"set cursorcolumn
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
 " インデントはスマートインデント
@@ -39,7 +40,7 @@ nnoremap k gk
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
+"set list listchars=tab:\▸\-
 " Tab文字を半角スペースにする
 set expandtab
 " 行頭以外のTab文字の表示幅（スペースいくつ分）
@@ -62,36 +63,63 @@ set hlsearch
 " ESC連打でハイライト解除
 
 
-call plug#begin('~/.vim/plugged')
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 
-Plug 'itchyny/lightline.vim'
-Plug 'jacoborus/tender.vim'
+filetype off
 
-call plug#end()
+if has('vim_starting')
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
-" set lighline theme inside lightline config
-let g:lightline = { 'colorscheme': 'tender' }
-
-" If you have vim >=8.0 or Neovim >= 0.1.5
-if (has("termguicolors"))
- set termguicolors
+  set runtimepath+=~/.vim/bundle/neobundle.vim
 endif
 
-" For Neovim 0.1.3 and 0.1.4
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+if !has('gui_running')
+  set t_Co=256
+endif
 
-" Theme
-syntax enable
-colorscheme tender
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-let s:plug = {
-      \ "plugs": get(g:, 'plugs', {})
+" originalrepos on github
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+  \ }
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'jpalardy/vim-slime'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/vimfiler.vim'
+NeoBundle 't9md/vim-textmanip'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'itchyny/lightline.vim'
+
+
+call neobundle#end()
+
+filetype plugin indent on     " required!
+filetype indent on
+syntax on
+set background=dark
+set laststatus=2
+
+colorscheme solarized
+
+NeoBundleCheck
+
+let g:lightline = {
+      \ 'colorscheme': 'solarized'
       \ }
 
-function! s:plug.is_installed(name)
-  return has_key(self.plugs, a:name) ? isdirectory(self.plugs[a:name].dir) : 0
-endfunction
 
-if s:plug.is_installed("vim-myplugin")
-  " setting
-endif
