@@ -62,6 +62,8 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 
+set clipboard+=unnamed
+set clipboard+=autoselect
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
