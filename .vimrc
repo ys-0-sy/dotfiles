@@ -1,6 +1,6 @@
 
 "文字コードをUFT-8に設定
-
+"
 set fenc=utf-8
 " バックアップファイルを作らない
 set nobackup
@@ -62,6 +62,7 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 
+set backspace=indent,eol,start
 set clipboard+=unnamed
 set clipboard+=autoselect
 
