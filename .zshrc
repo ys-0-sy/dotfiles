@@ -118,5 +118,11 @@ function tmux_automatically_attach_session()
 }
 tmux_automatically_attach_session
 
-powerline-daemon -q
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ "$(uname)" == 'Darwin' ]]; then
+  powerline-daemon -q
+  . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
+  powerline-daemon -q
+  . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+
+fi

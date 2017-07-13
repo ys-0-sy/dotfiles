@@ -11,10 +11,10 @@
 #      ~~            \/__/         \/__/         \/__/         \|__|         \/__/
 #
 
-if [OS == 'Mac']; then
+if [ "$(uname)" == 'Darwin' ]; then
   alias brew="env PATH=${PATH/\/Users\/saito\/\.phpenv\/shims:/} brew"
   export PATH=$HOME/.nodebrew/current/bin:$PATH
-elif [OS == 'Linux']; then
+elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   # ~/.bashrc: executed by bash(1) for non-login shells.
   # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
   # for examples

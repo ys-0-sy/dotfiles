@@ -12,7 +12,7 @@ else
   echo "Your platform ($(uname -a)) is not supported."
   exit 1
 fi
-if [OS == 'Mac']; then
+if [[echo ${OS} == 'Mac']]; then
   export PATH=$PATH:/Users/saito/Library/Android/sdk/platform-tools
   # Setting PATH for Python 2.7
   # The orginal version is saved in .bash_profile.pysave
