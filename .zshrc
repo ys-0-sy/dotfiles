@@ -1,4 +1,3 @@
-alias brew="env PATH=${PATH/\/Users\/saito\/\.phpenv\/shims:/} brew"
 
 # 補完機能
 autoload -U compinit
