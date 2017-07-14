@@ -20,8 +20,8 @@ init: ## Setup environment settings
 	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/init/init.sh
 
 test: ## Test dotfiles and init scripts
-	@#DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/test/test.sh
-	@echo "test is inactive temporarily"
+	@DOTPATH=$(DOTPATH) bash $(DOTPATH)/etc/test/test.sh
+	@#echo "test is inactive temporarily"
 
 upgrade: ## Push changes for this repo
 	git add .

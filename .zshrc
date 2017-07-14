@@ -118,6 +118,11 @@ function tmux_automatically_attach_session()
 }
 tmux_automatically_attach_session
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
 if [[ "$(uname)" == 'Darwin' ]]; then
   powerline-daemon -q
   . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
