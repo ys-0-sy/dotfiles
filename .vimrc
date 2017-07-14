@@ -103,6 +103,8 @@ NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 't9md/vim-textmanip'
+NeoBundle 'ConradIrwin/vim-bracketed-paste'
+"NeoBundle 'scrooloose/nerdtr'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'altercation/vim-colors-solarized'
