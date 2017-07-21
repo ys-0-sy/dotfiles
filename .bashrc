@@ -133,3 +133,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     fi
   fi
 fi
+export PATH=/usr/local/bin:$PATH
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

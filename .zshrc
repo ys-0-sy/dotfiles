@@ -46,6 +46,9 @@ source ~/.zplug/init.zsh
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
+zplug "b4b4r07/enhancd", use:enhancd.sh
+zplug "zsh-users/zsh-completions"
+zplug "greymd/tmux-xpanes"
 
 if ! zplug check --verbose; then
   printf 'Install? [y/N]: '
@@ -131,3 +134,11 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 
 fi
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/curl/bin:$PATH"
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="/usr/local/opt/opencv3/bin:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
