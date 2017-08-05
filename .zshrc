@@ -31,6 +31,7 @@ setopt hist_no_store
 setopt hist_expand
 # 履歴をインクリメンタルに追加
 setopt inc_append_history
+export LC_ALL='ja_JP.UTF-8'
 
 # 履歴補完
 autoload history-search-end
