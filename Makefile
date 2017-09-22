@@ -24,9 +24,9 @@ test: ## Test dotfiles and init scripts
 	@#echo "test is inactive temporarily"
 
 upgrade: ## Push changes for this repo
-	today=$(date "+%Y%m%d")
+	@date=$(date "+%Y%m%d")
 	git add .
-	git commit -m $today
+	git commit -m "(echo $(date))"
 	git push origin master
 
 update: ## Fetch changes for this repo
