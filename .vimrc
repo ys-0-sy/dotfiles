@@ -64,7 +64,7 @@ set hlsearch
 
 set backspace=indent,eol,start
 set clipboard+=unnamed
-set clipboard+=autoselect
+"set clipboard+=autoselect
 
 " Note: Skip initialization for vim-tiny or vim-small.
 if 0 | endif
