@@ -35,7 +35,7 @@ set laststatus=2
 set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
 nnoremap j gj
-nnoremap k gk
+noremap k gk
 
 
 " Tab系
@@ -47,6 +47,10 @@ set expandtab
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
+
+set softtabstop=2
+
+set autoindent
 
 
 " 検索系
@@ -126,4 +130,4 @@ NeoBundleCheck
 "      \ 'colorscheme': 'solarized'
 "      \ }
 
-
+"set termguicolors
