@@ -24,16 +24,16 @@ test: ## Test dotfiles and init scripts
 	@#echo "test is inactive temporarily"
 
 upgrade: ## Push changes for this repo
-	@date=$(date "+%Y%m%d")
+	$(eval DATE := $(shell date "+%Y%m%d"))
 	git add .
-	git commit -m " ${date} "
+	git commit -m "${DATE}"
 	git push origin master
 
 update: ## Fetch changes for this repo
-	git pull origin master
-	git submodule init
-	git submodule update
-	git submodule foreach git pull origin master
+	@git pull origin master
+	@git submodule init
+	@git submodule update
+	@git submodule foreach git pull origin master
 
 install: update deploy init ## Run make update, deploy, init
 	@exec $$SHELL
