@@ -26,7 +26,7 @@ test: ## Test dotfiles and init scripts
 upgrade: ## Push changes for this repo
 	@date=$(date "+%Y%m%d")
 	git add .
-	git commit -m "(echo $(date))"
+	git commit -m "$date"
 	git push origin master
 
 update: ## Fetch changes for this repo
