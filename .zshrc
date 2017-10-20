@@ -128,6 +128,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 if [[ "$(uname)" == 'Darwin' ]]; then
+  export PATH="$HOME/Library/Python/2.7/bin:$PATH"
   powerline-daemon -q
   . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
@@ -146,6 +147,6 @@ eval "$(pyenv init -)"
 export XDG_CONFIG_HOME=~/.config
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
+export LC_ALL='ja_JP.UTF-8'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$HOME/.nodebrew/current/bin:$PATH
