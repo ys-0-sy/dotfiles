@@ -12,7 +12,7 @@
 #
 
 if [ "$(uname)" == 'Darwin' ]; then
-  alias brew="env PATH=${PATH/\/Users\/saito\/\.phpenv\/shims:/} brew"
+  #alias brew="env PATH=${PATH/\/Users\/saito\/\.phpenv\/shims:/} brew"
   export PATH=$HOME/.nodebrew/current/bin:$PATH
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -133,7 +133,5 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
     fi
   fi
 fi
-export PATH=/usr/local/bin:$PATH
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
