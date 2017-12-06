@@ -13,6 +13,7 @@ set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
 
+set paste
 
 " 見た目系
 " 行番号を表示
