@@ -126,16 +126,14 @@ tmux_automatically_attach_session
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-ver_python=$(python -V 2>&1 | cut -d' ' -f2 | cut -d'.' -f1,2)
 
-
-
-if is_osx; then
+if [[ "$(uname)" == 'Darwin' ]]; then
   powerline-daemon -q
   . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   powerline-daemon -q
-  . ~/.local/lib/python$ver_python/site-packages/powerline/bindings/zsh/powerline.zsh
+  . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+
 fi
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
