@@ -1,7 +1,13 @@
 
 "文字コードをUFT-8に設定
 "
-set fenc=utf-8
+set encoding=utf-8
+scriptencoding utf-8
+set fileencoding=utf-8
+" 改行コードの自動判別. 左側が優先される
+set fileformats=unix,dos,mac
+" □や○文字が崩れる問題を解決"
+set ambiwidth=double
 " バックアップファイルを作らない
 set nobackup
 " スワップファイルを作らない
@@ -13,6 +19,7 @@ set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
 
+set paste
 
 " 見た目系
 " 行番号を表示
@@ -65,69 +72,56 @@ set wrapscan
 " 検索語をハイライト表示
 set hlsearch
 " ESC連打でハイライト解除
+" カーソルの左右移動で行末から次の行の行頭への移動が可能になる
+set whichwrap=b,s,h,l,<,>,[,],~
+
 
 set backspace=indent,eol,start
 set clipboard+=unnamed
 "set clipboard+=autoselect
 
-" Note: Skip initialization for vim-tiny or vim-small.
-if 0 | endif
 
-filetype off
 
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
+" プラグインが実際にインストールされるディレクトリ
+let s:dein_dir = expand('~/.cache/dein')
+" dein.vim 本体
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+" dein.vim がなければ github から落としてくる
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
   endif
-
-  set runtimepath+=~/.vim/bundle/neobundle.vim
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
 endif
 
-if !has('gui_running')
-  set t_Co=256
+" 設定開始
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+
+  " プラグインリストを収めた TOML ファイル
+  " 予め TOML ファイル（後述）を用意しておく
+  let g:rc_dir    = expand('~/.config/dein')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+
+  " TOML を読み込み、キャッシュしておく
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
+
+  " 設定終了
+  call dein#end()
+  call dein#save_state()
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+" もし、未インストールものものがあったらインストール
+if dein#check_install()
+  call dein#install()
+endif
 
-" originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc', {
-  \ 'build' : {
-    \ 'windows' : 'make -f make_mingw32.mak',
-    \ 'cygwin' : 'make -f make_cygwin.mak',
-    \ 'mac' : 'make -f make_mac.mak',
-    \ 'unix' : 'make -f make_unix.mak',
-  \ },
-  \ }
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'jpalardy/vim-slime'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 't9md/vim-textmanip'
-NeoBundle 'ConradIrwin/vim-bracketed-paste'
-"NeoBundle 'scrooloose/nerdtr'
-
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'itchyny/lightline.vim'
-
-
-call neobundle#end()
-
-filetype plugin indent on     " required!
 filetype indent on
 syntax on
 set background=dark
 set laststatus=2
 
 colorscheme solarized
-
-NeoBundleCheck
-"let g:lightline = {
-"      \ 'colorscheme': 'solarized'
-"      \ }
-
-"set termguicolors
