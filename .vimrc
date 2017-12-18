@@ -120,8 +120,15 @@ if dein#check_install()
 endif
 
 filetype indent on
-syntax on
-set background=dark
 set laststatus=2
 
+if filereadable(expand('~/.config/dein/config'))
+  source ~/.config/dein/config
+endif
+
+let g:solarized_termcolors=256
+let g:airline_theme = 'solarized'
+let g:indentLine_char = '¦'
+syntax enable
+set background=dark
 colorscheme solarized
