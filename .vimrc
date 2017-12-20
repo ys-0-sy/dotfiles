@@ -17,7 +17,6 @@ set autoread
 " バッファが編集中でもその他のファイルを開けるように
 set hidden
 " 入力中のコマンドをステータスに表示する
-set showcmd
 
 set paste
 
@@ -108,8 +107,10 @@ if dein#load_state(s:dein_dir)
   " TOML を読み込み、キャッシュしておく
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
 
-  " 設定終了
+  call dein#add('altercation/vim-colors-solarized')
+" 設定終了
   call dein#end()
   call dein#save_state()
 endif
@@ -126,9 +127,9 @@ if filereadable(expand('~/.config/dein/config'))
   source ~/.config/dein/config
 endif
 
-let g:solarized_termcolors=256
-let g:airline_theme = 'solarized'
 let g:indentLine_char = '¦'
+
 syntax enable
 set background=dark
 colorscheme solarized
+let g:solarized_termcolors=256

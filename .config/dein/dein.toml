@@ -20,13 +20,6 @@ hook_post_update = '''
 repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
-repo    = 'vim-airline/vim-airline'
-depends = ['vim-airline-themes']
-
-[[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-
-[[plugins]]
 repo =  'Shougo/unite.vim'
 
 #ディレクトリ表示
