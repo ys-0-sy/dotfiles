@@ -132,8 +132,24 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
       . /etc/bash_completion
     fi
   fi
+  export PATH=/usr/local/cuda/bin:${PATH}
+  export CUDA_ROOT=/usr/local/cuda
+  export CPATH=/usr/local/cuda/include:${CPATH}
+  export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
+  export LD_LIBRARY_PATH=/usr/local/cuda/lib:${LD_LIBRARY_PATH}
+  export LD_LIBRARY_PATH="/opt/intel/mkl/lib/intel64:/opt/intel/lib/intel64:$LD_LIBRARY_PATH"
+  export LD_LIBRARY_PATH=/opt/intel/mkl/lib/intel64:${LD_LIBRARY_PATH}
+  export CFLAGS=/usr/local/cuda/include:${CFLAGS}
+  export LDFLAGS=/usr/local/cuda/lib64:/usr/local/cuda/lib:${LDFLAGS}
+  export MPIROOT=/usr/local/ompi
+  export PATH=$MPIROOT/bin:$PATH
+  export LD_LIBRARY_PATH=$MPIROOT/lib:${LD_LIBRARY_PATH}
+  export MANPATH=$MPIROOT/share/man:${MANPATH}
 fi
 export PATH=/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# added by Anaconda3 installer
+#export PATH="/home/saito/anaconda3/bin:$PATH"
