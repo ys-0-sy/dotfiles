@@ -18,8 +18,6 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 
-set paste
-
 " 見た目系
 " 行番号を表示
 set number
