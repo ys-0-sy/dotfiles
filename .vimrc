@@ -135,8 +135,8 @@ if filereadable(expand('~/.config/dein/config'))
 endif
 
 let g:indentLine_char = '¦'
+colorscheme molokai
 
-syntax enable
+syntax on
+" 背景色
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256

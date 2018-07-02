@@ -21,8 +21,11 @@ hook_post_update = '''
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
+# [[plugins]]
+# repo = 'altercation/vim-colors-solarized'
+
 [[plugins]]
-repo = 'altercation/vim-colors-solarized'
+repo = 'tomasr/molokai'
 
 [[plugins]]
 repo =  'Shougo/unite.vim'
