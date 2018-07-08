@@ -38,7 +38,7 @@ set laststatus=2
 " コマンドラインの補完
 set wildmode=list:longest
 " 折り返し時に表示行単位での移動できるようにする
-nnoremap j gj
+noremap j gj
 noremap k gk
 
 
