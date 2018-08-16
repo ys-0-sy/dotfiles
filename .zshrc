@@ -143,13 +143,14 @@ export PATH="/usr/local/opt/opencv3/bin:$PATH"
 export PATH="/Users/saito/Library/Android/sdk/ndk-bundle/:$PATH"
 export PYTHONSTARTUP=~/.pythonstartup
 export PATH="$HOME/platform-tools/:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
 export XDG_CONFIG_HOME=~/.config
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="$PYENV_ROOT/versions/anaconda3-5.2.0/bin/:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH=$(yarn global bin):$PATH
+
+# heroku autocomplete setup
+HEROKU_AC_ZSH_SETUP_PATH=/Users/saito/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
