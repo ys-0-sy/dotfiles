@@ -1,0 +1,38 @@
+{
+	"analytics-uuid": "0ffd22eb-5c1e-4b34-aedb-bb38d91a812f",
+	"motd": {
+		"minVersion": "3.0.5"
+	},
+	"motd.fetched": 1536253361351,
+	"usage": true,
+	"user": {
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "105854770789089289226",
+		"email": "ysaito1@gmail.com",
+		"email_verified": true,
+		"at_hash": "_MzCZh1Ss_21icYCiR1Kvg",
+		"exp": 1536256975,
+		"iss": "accounts.google.com",
+		"iat": 1536253375
+	},
+	"tokens": {
+		"expires_at": 1536257065837,
+		"refresh_token": "1/Qud1U9WLmI2KJx8efHOnL9Iiu_lto_4KDN1Dcl6pfrE",
+		"scopes": [
+			"email",
+			"https://www.googleapis.com/auth/cloud-platform",
+			"https://www.googleapis.com/auth/cloudplatformprojects.readonly",
+			"https://www.googleapis.com/auth/firebase",
+			"openid"
+		],
+		"access_token": "ya29.GlsQBtwCLzGaMbjPUwCQ2efLY98Vj4DrTItp4U1Bd2WzVUwdUhRilslbZtc4U1lxFizkLYj59v7xZFNg9q2DbjFWBKQQSdRJc0i89cpheslCGDHzYp9q-c9Wcq4f",
+		"expires_in": 3600,
+		"scope": "https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/firebase",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ5NjQ4ZTAzMmNhYzU4NDI0ZTBkMWE3YzAzMGEzMTk4ZDNmNDZhZGIifQ.eyJhenAiOiI1NjM1ODQzMzU4NjktZmdyaGdtZDQ3YnFuZWtpajVpOGI1cHIwM2hvODQ5ZTYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1NjM1ODQzMzU4NjktZmdyaGdtZDQ3YnFuZWtpajVpOGI1cHIwM2hvODQ5ZTYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDU4NTQ3NzA3ODkwODkyODkyMjYiLCJlbWFpbCI6InlzYWl0bzFAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJ2OGpFdkZSWVRuZjJBbnRYYXlIejNBIiwiZXhwIjoxNTM2MjU3MDY1LCJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiaWF0IjoxNTM2MjUzNDY1fQ.XRVLH7IED7Dy_PBknaJvvEdIFKaQpedBKCyVSZp33-lJm6s2qVJSZ3ODDVUSmmnVJjtArxz1QgeEa4Nwv1V-BOBdpQ6Z3-P5u90Gacv21frtwlEW_PILFJy6HluFPFEemuPlf6SQuDln9lw6wbOsD9b1sxC25q3BCS8YGBfMEplkIRj7i0n4OcywCB5ZhTImCPkN-2v7w0z9hugYik2OtE0lwd0y8Y-QrfdLM_YHhOxh03fEqWjeDumxC_Dw_FDBxJgEjLMwhXPbHNH68zp8ga6-i58b36ZUzrVm-3JnJn6VyiR23kRyQ--546-zzaWh9nfIGDVwBZZTjPIWb7iZxg"
+	},
+	"activeProjects": {
+		"/Users/saito/Documents/Develop/vue/test-vue": "test-app-e37fe"
+	}
+}

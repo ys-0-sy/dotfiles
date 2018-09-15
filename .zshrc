@@ -120,28 +120,28 @@ function tmux_automatically_attach_session()
         fi
     fi
 }
+
+
 tmux_automatically_attach_session
 
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias pip update="pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U pip"
 
 if [[ "$(uname)" == 'Darwin' ]]; then
-  export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+  export LC_ALL='ja_JP.UTF-8'
   powerline-daemon -q
-  . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  . /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   powerline-daemon -q
   . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
 
 fi
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/usr/local/opt/opencv3/bin:$PATH"
 export PATH="/Users/saito/Library/Android/sdk/ndk-bundle/:$PATH"
-export PYTHONSTARTUP=~/.pythonstartup
 export PATH="$HOME/platform-tools/:$PATH"
 export XDG_CONFIG_HOME=~/.config
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
@@ -151,6 +151,9 @@ export PATH=$HOME/.nodebrew/current/bin:$PATH
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$(yarn global bin):$PATH
-
+export CREDENTIALS="/Users/saito/Documents/Develop/vue/test-app-e37fe-firebase-adminsdk-39sm9-fcc1a9c8ad.json"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export GOPATH=$HOME/.go
 # heroku autocomplete setup
-HEROKU_AC_ZSH_SETUP_PATH=/Users/saito/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+#HEROKU_AC_ZSH_SETUP_PATH=/Users/saito/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
