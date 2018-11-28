@@ -13,7 +13,12 @@
 
 if [ "$(uname)" == 'Darwin' ]; then
   #alias brew="env PATH=${PATH/\/Users\/saito\/\.phpenv\/shims:/} brew"
+  # some more ls aliases
+  alias ll='ls -alF'
+  alias la='ls -A'
+  alias l='ls -CF'
   export PATH=$HOME/.nodebrew/current/bin:$PATH
+  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   # ~/.bashrc: executed by bash(1) for non-login shells.
   # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
