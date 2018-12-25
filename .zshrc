@@ -157,3 +157,9 @@ export GOPATH=$HOME/.go
 # heroku autocomplete setup
 #HEROKU_AC_ZSH_SETUP_PATH=/Users/saito/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
+export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'

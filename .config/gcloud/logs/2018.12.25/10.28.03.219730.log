@@ -1,0 +1,419 @@
+2018-12-25 10:28:03,227 DEBUG    root            Loaded Command Group: [u'gcloud', u'components']
+2018-12-25 10:28:03,230 DEBUG    root            Loaded Command Group: [u'gcloud', u'components', u'update']
+2018-12-25 10:28:03,233 DEBUG    root            Running [gcloud.components.update] with arguments: [--allow-no-backup: "True", --quiet: "True", COMPONENT-IDS:5: "[u'core', u'gcloud-deps', u'bq', u'gcloud', u'gsutil']"]
+2018-12-25 10:28:04,267 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,268 INFO     ___FILE_ONLY___ 
+Your current Cloud SDK version is: 228.0.0
+
+2018-12-25 10:28:04,268 INFO     ___FILE_ONLY___ Installing components from version: 228.0.0
+
+2018-12-25 10:28:04,269 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,276 INFO     ___FILE_ONLY___ +----------------------------------------------------------------------------+
+2018-12-25 10:28:04,276 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,277 INFO     ___FILE_ONLY___ |                    These components will be installed.                     |
+2018-12-25 10:28:04,277 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,277 INFO     ___FILE_ONLY___ +-----------------------------------------------------+------------+---------+
+2018-12-25 10:28:04,277 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,277 INFO     ___FILE_ONLY___ |                         Name                        |  Version   |   Size  |
+2018-12-25 10:28:04,278 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,278 INFO     ___FILE_ONLY___ +-----------------------------------------------------+------------+---------+
+2018-12-25 10:28:04,278 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,278 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,278 INFO     ___FILE_ONLY___ BigQuery Command Line Tool                         
+2018-12-25 10:28:04,279 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,279 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,279 INFO     ___FILE_ONLY___     2.0.39
+2018-12-25 10:28:04,279 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,279 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,279 INFO     ___FILE_ONLY___ < 1 MiB
+2018-12-25 10:28:04,280 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,280 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,280 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,280 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,280 INFO     ___FILE_ONLY___ BigQuery Command Line Tool (Platform Specific)     
+2018-12-25 10:28:04,281 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,281 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,281 INFO     ___FILE_ONLY___     2.0.34
+2018-12-25 10:28:04,281 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,281 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,282 INFO     ___FILE_ONLY___ < 1 MiB
+2018-12-25 10:28:04,282 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,282 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,282 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,282 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,282 INFO     ___FILE_ONLY___ Cloud SDK Core Libraries (Platform Specific)       
+2018-12-25 10:28:04,283 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,283 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,283 INFO     ___FILE_ONLY___ 2018.09.24
+2018-12-25 10:28:04,283 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,283 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,284 INFO     ___FILE_ONLY___ < 1 MiB
+2018-12-25 10:28:04,284 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,284 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,285 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,285 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,285 INFO     ___FILE_ONLY___ Cloud Storage Command Line Tool                    
+2018-12-25 10:28:04,285 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,285 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,286 INFO     ___FILE_ONLY___       4.34
+2018-12-25 10:28:04,286 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,286 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,286 INFO     ___FILE_ONLY___ 3.5 MiB
+2018-12-25 10:28:04,286 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,287 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,287 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,287 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,287 INFO     ___FILE_ONLY___ Cloud Storage Command Line Tool (Platform Specific)
+2018-12-25 10:28:04,287 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,288 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,288 INFO     ___FILE_ONLY___       4.34
+2018-12-25 10:28:04,288 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,288 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,288 INFO     ___FILE_ONLY___ < 1 MiB
+2018-12-25 10:28:04,289 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,289 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,289 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,289 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,289 INFO     ___FILE_ONLY___ Default set of gcloud commands                     
+2018-12-25 10:28:04,289 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,290 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,290 INFO     ___FILE_ONLY___           
+2018-12-25 10:28:04,290 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,290 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,291 INFO     ___FILE_ONLY___        
+2018-12-25 10:28:04,291 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,291 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,291 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,291 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,292 INFO     ___FILE_ONLY___ gcloud cli dependencies                            
+2018-12-25 10:28:04,292 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,292 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,292 INFO     ___FILE_ONLY___ 2018.08.03
+2018-12-25 10:28:04,293 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,293 INFO     ___FILE_ONLY___ | 
+2018-12-25 10:28:04,293 INFO     ___FILE_ONLY___ 1.5 MiB
+2018-12-25 10:28:04,293 INFO     ___FILE_ONLY___  
+2018-12-25 10:28:04,294 INFO     ___FILE_ONLY___ |
+2018-12-25 10:28:04,294 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,294 INFO     ___FILE_ONLY___ +-----------------------------------------------------+------------+---------+
+2018-12-25 10:28:04,294 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,294 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:04,460 INFO     ___FILE_ONLY___ For the latest full release notes, please visit:
+  https://cloud.google.com/sdk/release_notes
+
+
+2018-12-25 10:28:04,461 INFO     ___FILE_ONLY___ #============================================================#
+
+2018-12-25 10:28:04,461 INFO     ___FILE_ONLY___ #= Creating update staging area                             =#
+
+2018-12-25 10:28:04,461 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:04,461 INFO     ___FILE_ONLY___ ======
+2018-12-25 10:28:04,461 INFO     ___FILE_ONLY___ ======
+2018-12-25 10:28:04,462 INFO     ___FILE_ONLY___ ======
+2018-12-25 10:28:04,549 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:04,583 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:04,856 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:04,974 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,083 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,149 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,217 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,306 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,409 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,530 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,617 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,712 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,788 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,865 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:05,977 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,078 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,133 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,228 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,324 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,413 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,484 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,592 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,674 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,768 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,834 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:06,935 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,020 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,079 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,181 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,277 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,421 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,555 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,644 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,735 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,825 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:07,906 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,014 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,225 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,374 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,486 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,625 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,898 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:08,899 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:08,901 INFO     ___FILE_ONLY___ #= Installing: BigQuery Command Line Tool                   =#
+
+2018-12-25 10:28:08,901 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:09,751 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,755 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,759 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,761 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,764 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,766 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,768 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,771 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,773 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,773 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,774 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,776 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,779 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,782 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,782 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,785 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,786 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,787 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,790 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,791 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,791 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,793 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,793 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,806 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,807 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,807 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,808 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,808 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,809 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,810 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,851 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,855 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,860 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,864 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,867 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,871 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,874 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,878 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,882 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,886 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,891 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,898 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,904 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,909 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,913 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,917 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,920 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,925 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,936 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,941 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,946 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,953 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,959 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,970 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,974 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,979 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,982 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,988 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:09,994 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,002 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,003 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:10,009 INFO     ___FILE_ONLY___ #= Installing: BigQuery Command Line Tool (Platform Spec... =#
+
+2018-12-25 10:28:10,009 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:10,127 INFO     ___FILE_ONLY___ ==============================
+2018-12-25 10:28:10,129 INFO     ___FILE_ONLY___ ===============
+2018-12-25 10:28:10,130 INFO     ___FILE_ONLY___ ===============
+2018-12-25 10:28:10,130 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:10,133 INFO     ___FILE_ONLY___ #= Installing: Cloud SDK Core Libraries (Platform Specific) =#
+
+2018-12-25 10:28:10,133 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:10,247 INFO     ___FILE_ONLY___ ==============================
+2018-12-25 10:28:10,249 INFO     ___FILE_ONLY___ ==========
+2018-12-25 10:28:10,250 INFO     ___FILE_ONLY___ =========
+2018-12-25 10:28:10,251 INFO     ___FILE_ONLY___ ===========
+2018-12-25 10:28:10,251 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:10,255 INFO     ___FILE_ONLY___ #= Installing: Cloud Storage Command Line Tool              =#
+
+2018-12-25 10:28:10,255 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:10,391 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,401 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,409 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,420 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,428 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,435 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,441 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,448 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,455 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,466 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,473 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,483 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,494 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,501 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,509 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,521 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,538 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,541 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,555 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,564 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,576 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,585 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,593 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,603 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,613 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,621 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,631 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,644 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,654 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:10,664 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,014 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,064 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,103 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,156 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,193 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,239 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,271 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,318 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,346 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,386 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,426 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,521 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,581 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,636 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,670 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,728 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,768 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,806 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,856 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,901 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:11,991 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,025 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,078 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,118 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,164 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,213 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,258 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,296 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,351 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,395 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,395 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:12,433 INFO     ___FILE_ONLY___ #= Installing: Cloud Storage Command Line Tool (Platform... =#
+
+2018-12-25 10:28:12,433 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:12,556 INFO     ___FILE_ONLY___ ==============================
+2018-12-25 10:28:12,557 INFO     ___FILE_ONLY___ ===============
+2018-12-25 10:28:12,558 INFO     ___FILE_ONLY___ ===============
+2018-12-25 10:28:12,558 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:12,561 INFO     ___FILE_ONLY___ #= Installing: Default set of gcloud commands               =#
+
+2018-12-25 10:28:12,562 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:12,564 INFO     ___FILE_ONLY___ ============================================================
+2018-12-25 10:28:12,565 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:12,565 INFO     ___FILE_ONLY___ #= Installing: gcloud cli dependencies                      =#
+
+2018-12-25 10:28:12,565 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:12,694 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,699 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,702 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,709 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,715 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,723 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,724 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,727 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,731 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,738 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,739 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,743 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,748 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,749 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,755 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,757 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,762 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,768 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,769 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,772 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,776 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,779 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,781 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,784 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,790 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,794 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,800 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,802 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,810 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,813 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,862 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,863 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,863 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,865 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,866 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,867 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,869 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,869 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,870 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,872 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,873 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,874 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,875 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,876 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,877 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,878 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,879 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,880 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,882 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,883 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,885 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,887 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,888 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,889 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,938 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,940 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,945 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,947 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,949 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,950 INFO     ___FILE_ONLY___ =
+2018-12-25 10:28:12,950 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:12,954 INFO     ___FILE_ONLY___ #= Creating backup and activating new installation          =#
+
+2018-12-25 10:28:12,954 INFO     ___FILE_ONLY___ #
+2018-12-25 10:28:12,955 DEBUG    root            Attempting to move directory [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk] to [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk.staging/.install/.backup]
+2018-12-25 10:28:12,955 INFO     ___FILE_ONLY___ ==============================
+2018-12-25 10:28:12,955 DEBUG    root            Attempting to move directory [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk.staging] to [/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk]
+2018-12-25 10:28:12,956 INFO     ___FILE_ONLY___ ==============================
+2018-12-25 10:28:12,956 INFO     ___FILE_ONLY___ #
+
+2018-12-25 10:28:12,960 DEBUG    root            Updating notification cache...
+2018-12-25 10:28:12,961 INFO     ___FILE_ONLY___ 
+
+2018-12-25 10:28:12,961 INFO     ___FILE_ONLY___ Performing post processing steps...
+2018-12-25 10:28:12,962 DEBUG    root            Executing command: ['/usr/local/Cellar/python@2/2.7.15_1/Frameworks/Python.framework/Versions/2.7/Resources/Python.app/Contents/MacOS/Python', u'-S', u'/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/lib/gcloud.py', u'components', u'post-process']
+2018-12-25 10:28:22,866 DEBUG    ___FILE_ONLY___ 
+2018-12-25 10:28:22,866 DEBUG    ___FILE_ONLY___ 
+2018-12-25 10:28:23,032 INFO     ___FILE_ONLY___ 
+Update done!
+
+
+2018-12-25 10:28:23,037 INFO     root            Display format: "none"
