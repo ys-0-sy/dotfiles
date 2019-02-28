@@ -1,0 +1,47 @@
+{
+	"projects/room-monitor-36c4a/locations/us-central1/functions/getEnvirnment": {
+		"name": "projects/room-monitor-36c4a/locations/us-central1/functions/getEnvirnment",
+		"timeout": {
+			"seconds": 540
+		},
+		"entryPoint": "getEnvirnment",
+		"sourceUploadUrl": "http://localhost:5001/upload?archive=%2Fvar%2Ffolders%2Fy1%2Fxx0szn6x2ynd82jk5l3j4z4h0000gr%2FT%2Ftmp-18645sK3u1SV8etRD.zip&localdir=%2FUsers%2Fsaito%2FDocuments%2FDevelop%2Ffirebase%2Froom-monitor%2Ffunctions",
+		"sourceArchiveUrl": "file:///var/folders/y1/xx0szn6x2ynd82jk5l3j4z4h0000gr/T/tmp-18645sK3u1SV8etRD.zip",
+		"httpsTrigger": {
+			"url": "http://localhost:5000/room-monitor-36c4a/us-central1/getEnvirnment"
+		},
+		"status": "READY",
+		"latestOperation": "operations/165431c2-e01b-4d0d-a756-6f4dcb71ddb0",
+		"availableMemoryMb": 17179
+	},
+	"projects/room-monitor-36c4a/locations/us-central1/functions/addMessage": {
+		"name": "projects/room-monitor-36c4a/locations/us-central1/functions/addMessage",
+		"timeout": {
+			"seconds": 540
+		},
+		"entryPoint": "addMessage",
+		"sourceUploadUrl": "http://localhost:5001/upload?archive=%2Fvar%2Ffolders%2Fy1%2Fxx0szn6x2ynd82jk5l3j4z4h0000gr%2FT%2Ftmp-26593zkoldctfudA.zip&localdir=%2FUsers%2Fsaito%2FDocuments%2FDevelop%2Ffirebase%2Froom-monitor%2Ffunctions",
+		"sourceArchiveUrl": "file:///var/folders/y1/xx0szn6x2ynd82jk5l3j4z4h0000gr/T/tmp-26593zkoldctfudA.zip",
+		"httpsTrigger": {
+			"url": "http://localhost:5000/room-monitor-36c4a/us-central1/addMessage"
+		},
+		"status": "READY",
+		"latestOperation": "operations/be4b8131-9f81-4750-881c-d0e4fe191277",
+		"availableMemoryMb": 17179
+	},
+	"projects/room-monitor-36c4a/locations/us-central1/functions/getEnvironment": {
+		"name": "projects/room-monitor-36c4a/locations/us-central1/functions/getEnvironment",
+		"timeout": {
+			"seconds": 540
+		},
+		"entryPoint": "getEnvironment",
+		"sourceUploadUrl": "http://localhost:5001/upload?archive=%2Fvar%2Ffolders%2Fy1%2Fxx0szn6x2ynd82jk5l3j4z4h0000gr%2FT%2Ftmp-26596fzeHsiDqqnB.zip&localdir=%2FUsers%2Fsaito%2FDocuments%2FDevelop%2Ffirebase%2Froom-monitor%2Ffunctions",
+		"sourceArchiveUrl": "file:///var/folders/y1/xx0szn6x2ynd82jk5l3j4z4h0000gr/T/tmp-26596fzeHsiDqqnB.zip",
+		"httpsTrigger": {
+			"url": "http://localhost:5000/room-monitor-36c4a/us-central1/getEnvironment"
+		},
+		"status": "READY",
+		"latestOperation": "operations/122f6310-9e1d-4d56-846b-03239c8b145f",
+		"availableMemoryMb": 17179
+	}
+}

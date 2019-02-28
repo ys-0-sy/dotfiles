@@ -128,7 +128,7 @@ tmux_automatically_attach_session
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias pip update="pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U pip"
+alias pipup="pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U pip"
 
 if [[ "$(uname)" == 'Darwin' ]]; then
   export LC_ALL='ja_JP.UTF-8'
@@ -147,19 +147,19 @@ export XDG_CONFIG_HOME=~/.config
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+export NODEBREW_ROOT=/usr/local/var/nodebrew
+export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 export PATH="$HOME/.yarn/bin:$PATH"
 export PATH=$(yarn global bin):$PATH
 export CREDENTIALS="/Users/saito/Documents/Develop/vue/test-app-e37fe-firebase-adminsdk-39sm9-fcc1a9c8ad.json"
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export GOPATH=$HOME/.go
-# heroku autocomplete setup
-#HEROKU_AC_ZSH_SETUP_PATH=/Users/saito/Library/Caches/heroku/autocomplete/zsh_setup && test -f $HEROKU_AC_ZSH_SETUP_PATH && source $HEROKU_AC_ZSH_SETUP_PATH;
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export HOMEBREW_INSTALL_CLEANUP=1
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
 export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+export PIPENV_VENV_IN_PROJECT=true
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
