@@ -45,11 +45,17 @@ source ~/.zplug/init.zsh
 
 #plugins
 zplug "b4b4r07/enhancd", use:init.sh
-zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "b4b4r07/enhancd", use:enhancd.sh
 zplug "zsh-users/zsh-completions"
 zplug "greymd/tmux-xpanes"
+zplug "mollifier/cd-gitroot"
+zplug "mollifier/anyframe"
+zplug "junegunn/fzf-bin", as:command, from:gh-r, file:fzf
+zplug "junegunn/fzf", as:command, of:bin/fzf-tmux
+zplug "peco/peco", as:command, from:gh-r, of:"*amd64*"
+zplug "b4b4r07/dotfiles", as:command, of:bin/peco-tmux
 
 if ! zplug check --verbose; then
   printf 'Install? [y/N]: '
@@ -128,38 +134,38 @@ tmux_automatically_attach_session
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias pipup="pip list --outdated --format=legacy | awk '{print $1}' | xargs pip install -U pip"
 
 if [[ "$(uname)" == 'Darwin' ]]; then
   export LC_ALL='ja_JP.UTF-8'
   powerline-daemon -q
   . /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  export NODEBREW_ROOT=/usr/local/var/nodebrew
+  export PATH=/usr/local/var/nodebrew/current/bin:$PATH
+  export PATH="/usr/local/opt/sqlite/bin:$PATH"
+  export PATH="$HOME/.yarn/bin:$PATH"
+  export PATH=$(yarn global bin):$PATH
+  export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+  export GOPATH=$HOME/.go
+  function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+  export HOMEBREW_INSTALL_CLEANUP=1
+  export PATH=$PATH:/usr/local/opt/go/libexec/bin
+  export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
+  export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  export PIPENV_VENV_IN_PROJECT=true
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+  export PATH="/usr/local/opt/curl/bin:$PATH"
+  export PATH="/usr/local/opt/gettext/bin:$PATH"
+  export PATH="/Users/saito/Library/Android/sdk/ndk-bundle/:$PATH"
+  export PATH="$HOME/platform-tools/:$PATH"
+  export XDG_CONFIG_HOME=~/.config
+  PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
+  export PATH=$PATH:/home/saito/.local/bin
   powerline-daemon -q
-  . /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+  . /home/saito/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 fi
-export PATH="/usr/local/opt/curl/bin:$PATH"
-export PATH="/usr/local/opt/gettext/bin:$PATH"
-export PATH="/Users/saito/Library/Android/sdk/ndk-bundle/:$PATH"
-export PATH="$HOME/platform-tools/:$PATH"
-export XDG_CONFIG_HOME=~/.config
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export NODEBREW_ROOT=/usr/local/var/nodebrew
-export PATH=/usr/local/var/nodebrew/current/bin:$PATH
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH=$(yarn global bin):$PATH
-export CREDENTIALS="/Users/saito/Documents/Develop/vue/test-app-e37fe-firebase-adminsdk-39sm9-fcc1a9c8ad.json"
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
-export GOPATH=$HOME/.go
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-export HOMEBREW_INSTALL_CLEANUP=1
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
-export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-export PIPENV_VENV_IN_PROJECT=true
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+

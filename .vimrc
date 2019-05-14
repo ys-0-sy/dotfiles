@@ -116,7 +116,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
   call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
 
-  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('tomasr/molokai')
 " 設定終了
   call dein#end()
   call dein#save_state()

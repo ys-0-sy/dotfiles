@@ -150,10 +150,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   export PATH=$MPIROOT/bin:$PATH
   export LD_LIBRARY_PATH=$MPIROOT/lib:${LD_LIBRARY_PATH}
   export MANPATH=$MPIROOT/share/man:${MANPATH}
+  USER_BASE_PATH=$(python3 -m site --user-base)
+  export PATH=$PATH:$USER_BASE_PATH/bin
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # added by Anaconda3 installer
 #export PATH="/home/saito/anaconda3/bin:$PATH"
-export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
