@@ -165,7 +165,7 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   export PATH=$PATH:/home/saito/.local/bin
   powerline-daemon -q
   . /home/saito/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
-
+  eval "$(direnv hook zsh)"
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

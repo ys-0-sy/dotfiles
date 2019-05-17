@@ -24,10 +24,10 @@ test: ## Test dotfiles and init scripts
 	@#echo "test is inactive temporarily"
 
 upgrade: ## Push changes for this repo
-	$(eval DATE := $(shell date "+%Y%m%d"))
-	git add .
-	git commit -m "${DATE}"
-	git push origin master
+	@$(eval DATE := $(shell date "+%Y%m%d"))
+	@git add .
+	@git commit -m "${DATE}"
+	@git push origin master
 
 update: ## Fetch changes for this repo
 	@git pull origin master
