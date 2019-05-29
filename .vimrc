@@ -116,7 +116,7 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
   call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
 
-  call dein#add('tomasr/molokai')
+  call dein#add('chriskempson/base16-vim')
 " 設定終了
   call dein#end()
   call dein#save_state()
@@ -135,7 +135,11 @@ if filereadable(expand('~/.config/dein/config'))
 endif
 
 let g:indentLine_char = '¦'
-colorscheme molokai
+" colorscheme molokai
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 syntax on
 " 背景色
