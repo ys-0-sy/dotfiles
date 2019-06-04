@@ -52,10 +52,10 @@ zplug "zsh-users/zsh-completions"
 zplug "greymd/tmux-xpanes"
 zplug "mollifier/cd-gitroot"
 zplug "mollifier/anyframe"
-zplug "junegunn/fzf-bin", as:command, from:gh-r, file:fzf
-zplug "junegunn/fzf", as:command, of:bin/fzf-tmux
-zplug "peco/peco", as:command, from:gh-r, of:"*amd64*"
-zplug "b4b4r07/dotfiles", as:command, of:bin/peco-tmux
+zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
+zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+zplug "peco/peco", as:command, from:gh-r, use:"*amd64*"
+zplug "b4b4r07/dotfiles", as:command, use:bin/peco-tmux
 
 if ! zplug check --verbose; then
   printf 'Install? [y/N]: '
@@ -152,7 +152,6 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
   export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  export PIPENV_VENV_IN_PROJECT=true
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
   export PATH="/usr/local/opt/curl/bin:$PATH"
   export PATH="/usr/local/opt/gettext/bin:$PATH"
@@ -166,9 +165,14 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   powerline-daemon -q
   . /home/saito/.local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
   eval "$(direnv hook zsh)"
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+  source /usr/local/bin/aws_zsh_completer.sh
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+alias ssh='ssh -o ServerAliveInterval=60'
+export PIPENV_VENV_IN_PROJECT=true
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
