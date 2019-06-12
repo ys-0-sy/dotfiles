@@ -1,0 +1,5 @@
+!.config/dein
+!.config/powerline
+
+.config/*
+.config/yarn

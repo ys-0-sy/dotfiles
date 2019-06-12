@@ -1,6 +1,12 @@
 # @nuxt/devalue
 
-Forked from [devalue](https://github.com/Rich-Harris/devalue) to log errors on non-serializable properties rather than throwing `Error`.
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![Circle CI][circleci-src]][circleci-href]
+[![package phobia][package-phobia-src]][package-phobia-href]
+[![bundle phobia][bundle-phobia-src]][bundle-phobia-href]
+
+> Forked from [devalue](https://github.com/Rich-Harris/devalue) to log errors on non-serializable properties rather than throwing `Error`.
 
 Like `JSON.stringify`, but handles
 
@@ -119,3 +125,19 @@ Using `new Function(code)` is akin to using indirect eval.
 ## License
 
 [LIL](LICENSE)
+
+<!-- Refs -->
+[npm-version-src]: https://flat.badgen.net/npm/v/@nuxtjs/devalue/latest
+[npm-version-href]: https://npmjs.com/package/@nuxtjs/devalue
+
+[npm-downloads-src]: https://flat.badgen.net/npm/dm/@nuxtjs/devalue
+[npm-downloads-href]: https://npmjs.com/package/@nuxtjs/devalue
+
+[circleci-src]: https://flat.badgen.net/circleci/github/nuxt/devalue
+[circleci-href]: https://circleci.com/gh/nuxt/devalue
+
+[package-phobia-src]: https://flat.badgen.net/packagephobia/install/@nuxtjs/devalue
+[package-phobia-href]: https://packagephobia.now.sh/result?p=@nuxtjs/devalue
+
+[bundle-phobia-src]: https://flat.badgen.net/bundlephobia/minzip/@nuxtjs/devalue
+[bundle-phobia-href]: https://bundlephobia.com/result?p=@nuxtjs/devalue
