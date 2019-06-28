@@ -160,6 +160,7 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   export XDG_CONFIG_HOME=~/.config
   PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
   MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+  eval "$(direnv hook zsh)"
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   export PATH=$PATH:/home/saito/.local/bin
   powerline-daemon -q
