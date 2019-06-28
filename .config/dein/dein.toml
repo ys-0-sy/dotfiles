@@ -1,0 +1,81 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# git clone 後、実行すべきコマンドがある場合はこんな感じ
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+hook_post_update = '''
+  if dein#util#_is_windows()
+    let cmd = 'tools\\update-dll-mingw'
+  elseif dein#util#_is_cygwin()
+    let cmd = 'make -f make_cygwin.mak'
+  elseif executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+[[plugins]]
+repo = 'posva/vim-vue'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+# [[plugins]]
+# repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo =  'Shougo/unite.vim'
+
+#ディレクトリ表示
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo =  'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'Shougo/neocomplcache'
+
+# スニペットの補完機能
+[[plugins]]
+repo = 'Shougo/neosnippet'
+
+# スニペット集
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'haya14busa/vim-operator-flashy'
