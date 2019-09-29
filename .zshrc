@@ -151,15 +151,16 @@ if [[ "$(uname)" == 'Darwin' ]]; then
   export PATH=$PATH:/usr/local/opt/go/libexec/bin
   export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
   export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-  export PATH="/usr/local/opt/curl/bin:$PATH"
-  export PATH="/usr/local/opt/gettext/bin:$PATH"
+  # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+  # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+  # export PATH="/usr/local/opt/curl/bin:$PATH"
+  # export PATH="/usr/local/opt/gettext/bin:$PATH"
   export PATH="/Users/saito/Library/Android/sdk/ndk-bundle/:$PATH"
   export PATH="$HOME/platform-tools/:$PATH"
   export XDG_CONFIG_HOME=~/.config
-  PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-  MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+  export PATH="$PATH:$HOME/Develop/flutter/bin"
+  # PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  # MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
   eval "$(direnv hook zsh)"
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   export PATH=$PATH:/home/saito/.local/bin
@@ -178,3 +179,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+export PATH="/usr/local/sbin:$PATH"
