@@ -180,3 +180,15 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 export PATH="/usr/local/sbin:$PATH"
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT="/Users/saito/Downloads/cocos2d-x-3.17.2/tools/cocos2d-console/bin"
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/Users/saito/Downloads"
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT="/Users/saito/Downloads/cocos2d-x-3.17.2/templates"
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
