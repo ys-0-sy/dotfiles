@@ -153,6 +153,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
   USER_BASE_PATH=$(python3 -m site --user-base)
   export PATH=$PATH:$USER_BASE_PATH/bin
 fi
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 eval "$(direnv hook bash)"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 # Base16 Shell

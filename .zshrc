@@ -173,6 +173,11 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias ssh='ssh -o ServerAliveInterval=60'
 export PIPENV_VENV_IN_PROJECT=true
 BASE16_SHELL="$HOME/.config/base16-shell/"
