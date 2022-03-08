@@ -138,30 +138,20 @@ alias l='ls -CF'
 if [[ "$(uname)" == 'Darwin' ]]; then
   export LC_ALL='ja_JP.UTF-8'
   powerline-daemon -q
-  . /usr/local/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
+  . /opt/homebrew/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
   export NODEBREW_ROOT=/usr/local/var/nodebrew
   export PATH=/usr/local/var/nodebrew/current/bin:$PATH
   export PATH="/usr/local/opt/sqlite/bin:$PATH"
   export PATH="$HOME/.yarn/bin:$PATH"
   export PATH=$(yarn global bin):$PATH
   export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+  export PATH="/opt/homebrew/opt/python@3.9/libexec/bin:$PATH"
   export GOPATH=$HOME/.go
   function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
-  export HOMEBREW_INSTALL_CLEANUP=1
-  export PATH=$PATH:/usr/local/opt/go/libexec/bin
-  export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH"
-  export PATH="/usr/local/lib/ruby/gems/2.5.0/bin:$PATH"
-  # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-  # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-  # export PATH="/usr/local/opt/curl/bin:$PATH"
-  # export PATH="/usr/local/opt/gettext/bin:$PATH"
-  export PATH="/Users/saito/Library/Android/sdk/ndk-bundle/:$PATH"
-  export PATH="$HOME/platform-tools/:$PATH"
-  export XDG_CONFIG_HOME=~/.config
-  export PATH="$PATH:$HOME/Develop/flutter/bin"
-  # PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-  # MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
   eval "$(direnv hook zsh)"
+  export NVM_DIR="$HOME/.nvm"
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion ]]
 elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
   export PATH=$PATH:/home/saito/.local/bin
   powerline-daemon -q
@@ -172,12 +162,6 @@ elif [[ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]]; then
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
 alias ssh='ssh -o ServerAliveInterval=60'
 export PIPENV_VENV_IN_PROJECT=true
 BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -185,15 +169,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+. /opt/homebrew/share/zsh/site-functions
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT="/Users/saito/Downloads/cocos2d-x-3.17.2/tools/cocos2d-console/bin"
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable COCOS_X_ROOT for cocos2d-x
-export COCOS_X_ROOT="/Users/saito/Downloads"
-export PATH=$COCOS_X_ROOT:$PATH
-
-# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
-export COCOS_TEMPLATES_ROOT="/Users/saito/Downloads/cocos2d-x-3.17.2/templates"
-export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
