@@ -1,5 +1,5 @@
 !.config/dein
 !.config/powerline
+!.config/ghostty
 
 .config/*
-.config/yarn
