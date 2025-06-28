@@ -1,12 +1,12 @@
 
-"文字コードをUFT-8に設定
+"文字コードをUTF-8に設定
 "
 set encoding=utf-8
 scriptencoding utf-8
 set fileencoding=utf-8
 " 改行コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac
-" □や○文字が崩れる問題を解決"
+" □や○文字が崩れる問題を解決
 set ambiwidth=double
 " バックアップファイルを作らない
 set nobackup
@@ -17,6 +17,7 @@ set autoread
 " バッファが編集中でもその他のファイルを開けるように
 set hidden
 " 入力中のコマンドをステータスに表示する
+set showcmd
 
 " 見た目系
 " 行番号を表示
@@ -69,6 +70,7 @@ set wrapscan
 " 検索語をハイライト表示
 set hlsearch
 " ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
 set whichwrap=b,s,h,l,<,>,[,],~
 
@@ -80,58 +82,54 @@ set clipboard+=unnamed
 
 
 " プラグインが実際にインストールされるディレクトリ
-let s:dein_dir = expand('~/.cache/dein')
-" dein.vim 本体
-let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+let s:dpp_base = expand('~/.cache/dpp')
+let s:dpp_src = s:dpp_base .. '/repos/github.com/Shougo/dpp.vim'
+let s:denops_src = s:dpp_base .. '/repos/github.com/vim-denops/denops.vim'
 
-" dein.vim がなければ github から落としてくる
-if &runtimepath !~# '/dein.vim'
-  if !isdirectory(s:dein_repo_dir)
-    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
-  endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+" dpp.vim がなければ github から落としてくる
+if !isdirectory(s:dpp_src)
+  execute '!git clone https://github.com/Shougo/dpp.vim' s:dpp_src
+endif
+if !isdirectory(s:denops_src)
+  execute '!git clone https://github.com/vim-denops/denops.vim' s:denops_src
 endif
 
-" 設定開始
-if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
+" ランタイムパスに追加
+execute 'set runtimepath^=' .. s:dpp_src
+execute 'set runtimepath^=' .. s:denops_src
 
-  " プラグインリストを収めた TOML ファイル
-  " 予め TOML ファイル（後述）を用意しておく
-  let g:rc_dir    = expand('~/.config/dein')
-  let s:toml      = g:rc_dir . '/dein.toml'
-  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
+" Deno設定
+let g:denops#deno = '/opt/homebrew/bin/deno'
 
-  " TOML を読み込み、キャッシュしておく
-  call dein#add('Shougo/vimproc.vim', {
-      \ 'build': {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin'  : 'make -f make_cygwin.mak',
-      \     'mac'     : 'make -f make_mac.mak',
-      \     'linux'   : 'make',
-      \     'unix'    : 'gmake',
-      \    },
-      \ })
-  call dein#load_toml(s:toml,      {'lazy': 0})
-  call dein#load_toml(s:lazy_toml, {'lazy': 1})
-  call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
+" dpp設定ディレクトリ
+let g:rc_dir = expand('~/.config/dpp')
 
-  call dein#add('chriskempson/base16-vim')
-" 設定終了
-  call dein#end()
-  call dein#save_state()
+" dppの設定開始
+if dpp#min#load_state(s:dpp_base)
+  " configディレクトリ内のTypeScriptファイルを読み込み
+  call dpp#make_state(s:dpp_base, g:rc_dir .. '/dpp.ts')
 endif
 
-" もし、未インストールものものがあったらインストール
-if dein#check_install()
-  call dein#install()
-endif
+" プラグインの自動インストール
+autocmd User DppLoadPost call dpp#check_install()
+
+" 手動インストールコマンド
+function! DppInstall() abort
+  call dpp#async_ext_action('installer', 'install')
+endfunction
+command! DppInstall call DppInstall()
+
+" 手動アップデートコマンド  
+function! DppUpdate() abort
+  call dpp#async_ext_action('installer', 'update')
+endfunction
+command! DppUpdate call DppUpdate()
 
 filetype indent on
 set laststatus=2
 
-if filereadable(expand('~/.config/dein/config'))
-  source ~/.config/dein/config
+if filereadable(expand('~/.config/dpp/config'))
+  source ~/.config/dpp/config
 endif
 
 let g:indentLine_char = '¦'
@@ -143,4 +141,20 @@ endif
 
 syntax on
 " 背景色
-set background=dark
+set background=light
+
+" ライトテーマの設定
+if &background == 'light'
+  " 利用可能なライトテーマを順番に試す
+  silent! colorscheme PaperColor
+  if !exists('g:colors_name') || g:colors_name != 'PaperColor'
+    silent! colorscheme one
+    if !exists('g:colors_name') || g:colors_name != 'one'
+      silent! colorscheme base16-default-light
+      if !exists('g:colors_name') || g:colors_name !~ 'base16'
+        " 最後のフォールバック
+        silent! colorscheme shine
+      endif
+    endif
+  endif
+endif
